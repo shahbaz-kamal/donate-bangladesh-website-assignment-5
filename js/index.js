@@ -1,19 +1,30 @@
 // //Essential functions starts
-// *function for adding class hidden
 
+// *function 1: for hiding a section
 function pleaseHide(id) {
   const idElement = document.getElementById(id);
   idElement.classList.add("hidden");
 }
+// *function 2:for displaying a section
 function pleaseShow(id) {
   const idElement = document.getElementById(id);
   idElement.classList.remove("hidden");
 }
-
+// *function 3: for showing alert
+function alertMessage(element) {
+  const value = element.value;
+  if (value < 0 || isNaN(value)) {
+    return alert("Invalid Donation Amount");
+  } else if (value === 0) {
+    return alert(
+      "Donating 0 Tk. is not actualy donating, please donate greater than 0 tk."
+    );
+  }
+}
 // //Essential functions ends
 
 // console.log("Project setum Done");
-// *targeting the essential variable
+// *targeting the essential variables
 const donationBtnEl = document.getElementById("donation-btn");
 const historyBtnEl = document.getElementById("history-btn");
 // const cardNoakhaliEl = document.getElementById("card-noakhali");
