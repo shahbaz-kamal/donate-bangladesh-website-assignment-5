@@ -47,7 +47,8 @@
         font-family: "Lexend", sans-serif;
       }
       input::placeholder {
-        font-weight: 300; /* Custom font weight */
+        font-weight: 300;
+        font-size: 16px; /* Custom font weight */
       }
     </style>
   </head>
@@ -138,7 +139,7 @@
               <img class="" src="./assets/coin.png" alt="" />
             </div>
             <p class="font-regular text-sm lg:text-base text-color-secondary">
-              <span id="balance-Noakhali">0</span> <span>BDT</span>
+              <span id="balance-noakhali">0</span> <span>BDT</span>
             </p>
           </button>
           <!-- ? card Title-->
@@ -162,19 +163,19 @@
             total expense and transaction history in our website.
           </p>
 
-          <div class="flex flex-row lg:flex-col gap-3 lg:gap-4">
+          <div class="w-full flex flex-col gap-2 lg:gap-4">
             <!-- ?input  field-->
             <input
               id="input-noakhali"
               type="text"
               placeholder="Write Donation Amount"
-              class="input input-bordered lg:w-full placeholder-color-tertiary py-[18px] pl-[18px]"
+              class="input input-bordered w-full placeholder-color-tertiary pl-[18px] lg:py-6"
             />
             <!-- ?Noakhali Donate Button -->
 
             <button
               id="donate-noakhali-btn"
-              class="rounded-lg py-4 text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8 lg:w-full border-none"
+              class="rounded-lg py-3 text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl w-full border-none"
             >
               Donate Now
             </button>
@@ -226,7 +227,7 @@
               <img class="" src="./assets/coin.png" alt="" />
             </div>
             <p class="font-regular text-sm lg:text-base text-color-secondary">
-              <span>0</span> <span>BDT</span>
+              <span id="balance-feni">0</span> <span>BDT</span>
             </p>
           </button>
           <!-- ? card Title-->
@@ -251,18 +252,19 @@
             payment.
           </p>
 
-          <div class="flex flex-row lg:flex-col gap-3 lg:gap-4">
+          <div class="w-full flex flex-col gap-2 lg:gap-4">
             <!-- ?input  field-->
             <input
+              id="input-feni"
               type="text"
               placeholder="Write Donation Amount"
-              class="input input-bordered lg:w-full placeholder-color-tertiary py-[18px] pl-[18px]"
+              class="input input-bordered w-full placeholder-color-tertiary pl-[18px] lg:py-6"
             />
             <!-- ?Feni Donate Button -->
 
             <button
-              class="rounded-lg py-4 text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8 lg:w-full border-none"
-              onclick="my_modal_feni.showModal()"
+              id="donate-feni-btn"
+              class="rounded-lg py-3 text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl w-full border-none"
             >
               Donate Now
             </button>
@@ -343,17 +345,17 @@
             organisation as we are in extreme need of support.
           </p>
 
-          <div class="flex flex-row lg:flex-col gap-3 lg:gap-4">
+          <div class="w-full flex flex-col gap-2 lg:gap-4">
             <!-- ?input  field-->
             <input
               type="text"
               placeholder="Write Donation Amount"
-              class="input input-bordered lg:w-full placeholder-color-tertiary py-[18px] pl-[18px]"
+              class="input input-bordered w-full placeholder-color-tertiary pl-[18px] lg:py-6"
             />
             <!-- ?Quota movement Donate Button -->
 
             <button
-              class="rounded-lg py-4 text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8 lg:w-full border-none"
+              class="rounded-lg py-3 text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl w-full border-none"
               onclick="my_modal_quota.showModal()"
             >
               Donate Now

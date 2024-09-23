@@ -12,12 +12,12 @@ function pleaseShow(id) {
 }
 // *function 3: for showing alert
 function alertMessage(element) {
-  const value = element.value;
-  if (value < 0 || isNaN(value)) {
-    if (value < 0 || isNaN(value)) {
+  const valueOfInput = element.value;
+  if (valueOfInput < 0 || isNaN(valueOfInput)) {
+    if (valueOfInput < 0 || isNaN(valueOfInput)) {
       alert("Invalid Donation Amount");
       return false;
-    } else if (value === 0) {
+    } else if (valueOfInput === 0) {
       alert(
         "Donating 0 Tk. is not actualy donating, please donate greater than 0 tk."
       );
@@ -48,10 +48,17 @@ const historyBtnEl = document.getElementById("history-btn");
 // const cardFeniEl = document.getElementById("card-feni");
 // const cardQuotaEl = document.getElementById("card-quota");
 const totalBalanceEl = document.getElementById("total-balance");
-const balanceNoakhaliEl = document.getElementById("balance-Noakhali");
-const inputNoakhali = document.getElementById("input-noakhali");
+// noakhali
+const balanceNoakhaliEl = document.getElementById("balance-noakhali");
+const inputNoakhaliEl = document.getElementById("input-noakhali");
 const DonateNoakhaliBtnEl = document.getElementById("donate-noakhali-btn");
 const modalNoakhali = document.getElementById("my_modal_1");
+// feni
+const balanceFeniEl = document.getElementById("balance-feni");
+const inputFeniEl = document.getElementById("input-feni");
+const DonateFeniBtnEl = document.getElementById("donate-feni-btn");
+const modalFeniEl = document.getElementById("my_modal_feni");
+// feni
 
 // *Updating History button & Donation button functionality while clicking history
 historyBtnEl.addEventListener("click", function (event) {
@@ -115,10 +122,14 @@ donationBtnEl.addEventListener("click", function (event) {
 // *Functionality of Noakhali Donate button
 
 DonateNoakhaliBtnEl.addEventListener("click", function () {
-  if (alertMessage(inputNoakhali)) {
-    addingCard(inputNoakhali, balanceNoakhaliEl, totalBalanceEl);
+  if (alertMessage(inputNoakhaliEl)) {
+    addingCard(inputNoakhaliEl, balanceNoakhaliEl, totalBalanceEl);
     modalNoakhali.showModal();
   }
-
-  // pleaseShow("my_modal_1");
+});
+DonateFeniBtnEl.addEventListener("click", function () {
+  if (alertMessage(inputFeniEl)) {
+    addingCard(inputFeniEl, balanceFeniEl, totalBalanceEl);
+    modalFeniEl.showModal();
+  }
 });
