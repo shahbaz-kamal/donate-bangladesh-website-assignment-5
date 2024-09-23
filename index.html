@@ -54,7 +54,7 @@
   </head>
   <body class="font-lexend">
     <!-- Section: header starts -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md">
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md">
       <!-- *navbar starts -->
       <nav class="bg-navbar-background">
         <div
@@ -316,7 +316,7 @@
               <img class="" src="./assets/coin.png" alt="" />
             </div>
             <p class="font-regular text-sm lg:text-base text-color-secondary">
-              <span>0</span> <span>BDT</span>
+              <span id="balance-quota">0</span> <span>BDT</span>
             </p>
           </button>
           <!-- ? card Title-->
@@ -348,6 +348,7 @@
           <div class="w-full flex flex-col gap-2 lg:gap-4">
             <!-- ?input  field-->
             <input
+              id="input-quota"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered w-full placeholder-color-tertiary pl-[18px] lg:py-6"
@@ -355,8 +356,8 @@
             <!-- ?Quota movement Donate Button -->
 
             <button
+              id="donate-quota-btn"
               class="rounded-lg py-3 text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl w-full border-none"
-              onclick="my_modal_quota.showModal()"
             >
               Donate Now
             </button>
@@ -386,20 +387,18 @@
       </div>
       <!-- card 3 ends -->
       <!-- * History segments -->
-      <section
-        id="card-history"
-        class="hidden p-6 lg:p-8 border border-stroke-secondary rounded-2xl shadow-md space-y-4 lg:space-y-4"
-      >
-        <div>
+      <section id="card-history" class="space-y-4 lg:space-y-4 hidden">
+        <div
+          id="no-donation-message"
+          class="p-6 lg:p-8 border border-stroke-secondary rounded-2xl shadow-md"
+        >
           <!-- ? card Title-->
-          <h2 class="font-bold text-base lg:text-xl text-color-primary">
-            500 Taka is Donated for famine—2024 at Feni, Bangla
+          <h2
+            class="font-bold text-base lg:text-xl text-error mb-3 lg-mb-4 text-center"
+          >
+            You have not Donated Yet!
           </h2>
           <!-- ?Card Description -->
-          <p class="font-light text-color-secondary text-sm lg:text-base">
-            The recent Quota movement has resulted in numerous injuries and
-            significant
-          </p>
         </div>
       </section>
     </main>

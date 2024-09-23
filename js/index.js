@@ -13,16 +13,30 @@ function pleaseShow(id) {
 // *function 3: for showing alert
 function alertMessage(element) {
   const valueOfInput = element.value;
-  if (valueOfInput < 0 || isNaN(valueOfInput)) {
-    if (valueOfInput < 0 || isNaN(valueOfInput)) {
+  const valueOfTotalAmount = parseFloat(
+    document.getElementById("total-balance").innerText
+  );
+  if (
+    parseFloat(valueOfInput) < 0 ||
+    isNaN(valueOfInput) ||
+    valueOfInput === "" ||
+    valueOfInput > valueOfTotalAmount ||
+    valueOfInput === "0"
+  ) {
+    if (
+      parseFloat(valueOfInput) < 0 ||
+      isNaN(valueOfInput) ||
+      valueOfInput === "" ||
+      valueOfInput > valueOfTotalAmount
+    ) {
       alert("Invalid Donation Amount");
-      return false;
-    } else if (valueOfInput === 0) {
+    } else if (valueOfInput === "0") {
       alert(
         "Donating 0 Tk. is not actualy donating, please donate greater than 0 tk."
       );
-      return false;
     }
+    element.value = "";
+    return false;
   }
   return true;
 }
@@ -34,13 +48,12 @@ function addingCard(textboxInputIdEl, cardBalanceEl, totalBalanceEl) {
   const totalBalance = parseFloat(totalBalanceEl.innerText);
   const newCardBalance = cardBalance + textboxInput;
   const newTotalBalance = totalBalance - textboxInput;
-  cardBalanceEl.innerText = newCardBalance;
-  totalBalanceEl.innerText = newTotalBalance;
+  cardBalanceEl.innerText = newCardBalance.toFixed(2);
+  totalBalanceEl.innerText = newTotalBalance.toFixed(2);
 }
 
 // //Essential functions ends
 
-// console.log("Project setum Done");
 // *targeting the essential variables
 const donationBtnEl = document.getElementById("donation-btn");
 const historyBtnEl = document.getElementById("history-btn");
@@ -58,7 +71,11 @@ const balanceFeniEl = document.getElementById("balance-feni");
 const inputFeniEl = document.getElementById("input-feni");
 const DonateFeniBtnEl = document.getElementById("donate-feni-btn");
 const modalFeniEl = document.getElementById("my_modal_feni");
-// feni
+// Quota
+const balanceQuotaEl = document.getElementById("balance-quota");
+const inputQuotaEl = document.getElementById("input-quota");
+const DonateQuotaBtnEl = document.getElementById("donate-quota-btn");
+const modalQuotaEl = document.getElementById("my_modal_quota");
 
 // *Updating History button & Donation button functionality while clicking history
 historyBtnEl.addEventListener("click", function (event) {
@@ -125,11 +142,79 @@ DonateNoakhaliBtnEl.addEventListener("click", function () {
   if (alertMessage(inputNoakhaliEl)) {
     addingCard(inputNoakhaliEl, balanceNoakhaliEl, totalBalanceEl);
     modalNoakhali.showModal();
+    const donatedAmount = parseFloat(inputNoakhaliEl.value).toFixed(2);
+    // console.log(donatedAmount);
+
+    // history functionality
+
+    const historyItem = document.createElement("div");
+    historyItem.className =
+      "p-6 lg:p-8 border border-stroke-secondary rounded-2xl shadow-md";
+    historyItem.innerHTML = `
+        <h2 class="font-bold text-base lg:text-xl text-color-primary mb-3 lg-mb-4">
+             ${donatedAmount} Taka is Donated for famine—2024 at Noakhali, Bangladesh
+        </h2>
+        <p class="font-light text-color-secondary text-sm lg:text-base">
+            Date : ${new Date().toString()}
+        </p>`;
+    const cardHistory = document.getElementById("card-history");
+    cardHistory.insertBefore(historyItem, cardHistory.firstChild);
+
+    // clearing the input field
+    inputNoakhaliEl.value = " ";
+    // hiding No donation message
+    pleaseHide("no-donation-message");
   }
 });
+
+// *Functionality of Feni Donate button
 DonateFeniBtnEl.addEventListener("click", function () {
   if (alertMessage(inputFeniEl)) {
     addingCard(inputFeniEl, balanceFeniEl, totalBalanceEl);
     modalFeniEl.showModal();
+    // history functionality
+    const donatedAmount = parseFloat(inputFeniEl.value).toFixed(2);
+    const historyItem = document.createElement("div");
+    historyItem.className =
+      "p-6 lg:p-8 border border-stroke-secondary rounded-2xl shadow-md";
+    historyItem.innerHTML = `
+        <h2 class="font-bold text-base lg:text-xl text-color-primary mb-3 lg-mb-4">
+             ${donatedAmount} Taka is Donated for Flood Relief in Feni,BangIadesh
+        </h2>
+        <p class="font-light text-color-secondary text-sm lg:text-base">
+            Date : ${new Date().toString()}
+        </p>`;
+    const cardHistory = document.getElementById("card-history");
+    cardHistory.insertBefore(historyItem, cardHistory.firstChild);
+    // Clearing input field
+    inputFeniEl.value = " ";
+    // hiding No donation message
+    pleaseHide("no-donation-message");
+  }
+});
+
+// *Functionality of Quota Donate button
+DonateQuotaBtnEl.addEventListener("click", function () {
+  if (alertMessage(inputQuotaEl)) {
+    addingCard(inputQuotaEl, balanceQuotaEl, totalBalanceEl);
+    modalQuotaEl.showModal();
+    // history functionality
+    const donatedAmount = parseFloat(inputQuotaEl.value).toFixed(2);
+    const historyItem = document.createElement("div");
+    historyItem.className =
+      "p-6 lg:p-8 border border-stroke-secondary rounded-2xl shadow-md";
+    historyItem.innerHTML = `
+        <h2 class="font-bold text-base lg:text-xl text-color-primary mb-3 lg-mb-4">
+             ${donatedAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
+        </h2>
+        <p class="font-light text-color-secondary text-sm lg:text-base">
+            Date : ${new Date().toString()}
+        </p>`;
+    const cardHistory = document.getElementById("card-history");
+    cardHistory.insertBefore(historyItem, cardHistory.firstChild);
+    // Clearing input field
+    inputQuotaEl.value = " ";
+    // hiding No donation message
+    pleaseHide("no-donation-message");
   }
 });
