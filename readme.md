@@ -29,8 +29,8 @@
 ## Functionalities
 
 - **Donation and History Button Functionality**:
-  - Clicking the "History" button will hide the donation data and display the history.
-  - Clicking the "Donation" button will hide the history and display the donation data.
+  - Clicking the "History" button will hide the donation data and display the history. ✅
+  - Clicking the "Donation" button will hide the history and display the donation data. ✅
 - **Donation Functionality for Each Card**:
   - When the "Donate Now" button is clicked:
     - The donation input will be deducted from the total account balance, and the updated balance will be shown.
@@ -50,7 +50,7 @@
 
 ## Challenges
 
-- **Sticky Navbar**: Make the navbar sticky to the top of the page.
+- **Sticky Navbar**: Make the navbar sticky to the top of the page. ✅
 - **Blog Page**: Create a `blog.html` file and link it to the main page:
   - The blog page should contain 4 questions and their answers:
     1. What is the Document Object Model (DOM)?
