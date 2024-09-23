@@ -14,13 +14,30 @@ function pleaseShow(id) {
 function alertMessage(element) {
   const value = element.value;
   if (value < 0 || isNaN(value)) {
-    return alert("Invalid Donation Amount");
-  } else if (value === 0) {
-    return alert(
-      "Donating 0 Tk. is not actualy donating, please donate greater than 0 tk."
-    );
+    if (value < 0 || isNaN(value)) {
+      alert("Invalid Donation Amount");
+      return false;
+    } else if (value === 0) {
+      alert(
+        "Donating 0 Tk. is not actualy donating, please donate greater than 0 tk."
+      );
+      return false;
+    }
   }
+  return true;
 }
+// *function 4: Adding the donation amount to the card amount
+
+function addingCard(textboxInputIdEl, cardBalanceEl, totalBalanceEl) {
+  const textboxInput = parseFloat(textboxInputIdEl.value);
+  const cardBalance = parseFloat(cardBalanceEl.innerText);
+  const totalBalance = parseFloat(totalBalanceEl.innerText);
+  const newCardBalance = cardBalance + textboxInput;
+  const newTotalBalance = totalBalance - textboxInput;
+  cardBalanceEl.innerText = newCardBalance;
+  totalBalanceEl.innerText = newTotalBalance;
+}
+
 // //Essential functions ends
 
 // console.log("Project setum Done");
@@ -30,6 +47,11 @@ const historyBtnEl = document.getElementById("history-btn");
 // const cardNoakhaliEl = document.getElementById("card-noakhali");
 // const cardFeniEl = document.getElementById("card-feni");
 // const cardQuotaEl = document.getElementById("card-quota");
+const totalBalanceEl = document.getElementById("total-balance");
+const balanceNoakhaliEl = document.getElementById("balance-Noakhali");
+const inputNoakhali = document.getElementById("input-noakhali");
+const DonateNoakhaliBtnEl = document.getElementById("donate-noakhali-btn");
+const modalNoakhali = document.getElementById("my_modal_1");
 
 // *Updating History button & Donation button functionality while clicking history
 historyBtnEl.addEventListener("click", function (event) {
@@ -89,4 +111,14 @@ donationBtnEl.addEventListener("click", function (event) {
   pleaseShow("card-feni");
   pleaseShow("card-quota");
   pleaseHide("card-history");
+});
+// *Functionality of Noakhali Donate button
+
+DonateNoakhaliBtnEl.addEventListener("click", function () {
+  if (alertMessage(inputNoakhali)) {
+    addingCard(inputNoakhali, balanceNoakhaliEl, totalBalanceEl);
+    modalNoakhali.showModal();
+  }
+
+  // pleaseShow("my_modal_1");
 });

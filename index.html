@@ -34,6 +34,7 @@
               "stroke-primary": "rgba(17, 17, 17, 0.3)",
               "stroke-secondary": "rgba(17, 17, 17, 0.1)",
               "btn-primary": "#B4F461",
+              "background-card-balance": "rgba(17, 17, 17, 0.05)",
               "navbar-background": "rgba(249, 247, 243, 1)",
             },
           },
@@ -84,7 +85,7 @@
               <img class="" src="./assets/coin.png" alt="" />
             </div>
             <p class="font-medium text-sm lg:text-xl text-color-secondary">
-              <span>5500</span> <span>BDT</span>
+              <span id="total-balance">5500</span> <span>BDT</span>
             </p>
           </div>
         </div>
@@ -130,12 +131,14 @@
         <!-- !text container -->
         <div class="col-span-1">
           <!-- ?startring btn -->
-          <button class="btn">
+          <button
+            class="flex rounded-lg py-3 px-4 bg-background-card-balance gap-2 justify-center items-center"
+          >
             <div class="">
               <img class="" src="./assets/coin.png" alt="" />
             </div>
             <p class="font-regular text-sm lg:text-base text-color-secondary">
-              <span>0</span> <span>BDT</span>
+              <span id="balance-Noakhali">0</span> <span>BDT</span>
             </p>
           </button>
           <!-- ? card Title-->
@@ -162,6 +165,7 @@
           <div class="flex flex-row lg:flex-col gap-3 lg:gap-4">
             <!-- ?input  field-->
             <input
+              id="input-noakhali"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered lg:w-full placeholder-color-tertiary py-[18px] pl-[18px]"
@@ -169,8 +173,8 @@
             <!-- ?Noakhali Donate Button -->
 
             <button
+              id="donate-noakhali-btn"
               class="rounded-lg py-4 text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8 lg:w-full border-none"
-              onclick="my_modal_1.showModal()"
             >
               Donate Now
             </button>
@@ -215,7 +219,9 @@
         <!-- !text container -->
         <div class="col-span-1">
           <!-- ?startring btn -->
-          <button class="btn">
+          <button
+            class="flex rounded-lg py-3 px-4 bg-background-card-balance gap-2 justify-center items-center"
+          >
             <div class="">
               <img class="" src="./assets/coin.png" alt="" />
             </div>
@@ -301,7 +307,9 @@
         <!-- !text container -->
         <div class="col-span-1">
           <!-- ?startring btn -->
-          <button class="btn">
+          <button
+            class="flex rounded-lg py-3 px-4 bg-background-card-balance gap-2 justify-center items-center"
+          >
             <div class="">
               <img class="" src="./assets/coin.png" alt="" />
             </div>
