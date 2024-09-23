@@ -45,10 +45,13 @@
       .font-lexend {
         font-family: "Lexend", sans-serif;
       }
+      input::placeholder {
+        font-weight: 300; /* Custom font weight */
+      }
     </style>
   </head>
   <body class="font-lexend">
-    <!-- SS: header starts -->
+    <!-- Section: header starts -->
     <header>
       <!-- *navbar starts -->
       <nav class="bg-navbar-background">
@@ -63,7 +66,13 @@
             </button>
           </div>
           <div class="navbar-center space-x-4">
-            <div><img src="./assets/logo.png" alt="" /></div>
+            <div class="w-7 h-7 lg: w-auto lg:h-auto">
+              <img
+                class="w-full h-full object-fill"
+                src="./assets/logo.png"
+                alt=""
+              />
+            </div>
             <h3
               class="text-sm lg:text-xl text-color-primary font-semibold hidden lg:block"
             >
@@ -71,12 +80,8 @@
             </h3>
           </div>
           <div class="navbar-end space-x-1 lg:space-x-3">
-            <div class="w-4 h-4 lg:w-12 lg:w-12">
-              <img
-                class="w-full h-full object-cover"
-                src="./assets/coin.png"
-                alt=""
-              />
+            <div class="">
+              <img class="" src="./assets/coin.png" alt="" />
             </div>
             <p class="font-medium text-sm lg:text-xl text-color-secondary">
               <span>5500</span> <span>BDT</span>
@@ -87,7 +92,7 @@
       <!-- navbar Ends -->
       <!-- *Donation & History Button starts-->
       <section
-        class="container mx-auto flex justify-center gap-3 lg:gap-4 mt-5 lg:mt-7"
+        class="container mx-auto flex justify-center gap-3 lg:gap-4 mt-5 lg:mt-7 mb-6 lg:mb-8"
       >
         <button
           class="px-8 py-2 lg:py-4 text-sm lg:text-xl rounded-lg font-semibold bg-btn-primary text-color-primary"
@@ -102,10 +107,284 @@
       </section>
       <!-- Donation & History Button Ends -->
     </header>
-    <!-- SE: header Ends -->
+    <!-- Section header Ends -->
 
-    <!-- SS:Main Starts -->
-    <main></main>
+    <!-- Section:Main Starts -->
+    <main class="space-y-6 lg:space-y-8 container mx-auto">
+      <!-- *Donation section -->
+      <!-- //Card1: Donate for Noakhali -->
+      <div
+        class="p-6 lg:p-8 border border-stroke-secondary rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 shadow-md"
+      >
+        <!-- !image container -->
+        <div class="rounded-xl col-span-1 w-full h-full">
+          <img
+            class="w-full h-full rounded-xl object-cover"
+            src="./assets/noakhali.png"
+            alt=""
+          />
+        </div>
+        <!-- !text container -->
+        <div class="col-span-1">
+          <!-- ?startring btn -->
+          <button class="btn">
+            <div class="">
+              <img class="" src="./assets/coin.png" alt="" />
+            </div>
+            <p class="font-regular text-sm lg:text-base text-color-secondary">
+              <span>0</span> <span>BDT</span>
+            </p>
+          </button>
+          <!-- ? card Title-->
+          <h2
+            class="mt-3 mb-3 lg:mt-4 lg:mb-4 font-bold text-base lg:text-xl text-color-primary"
+          >
+            Donate for Flood at Noakhali, Bangladesh
+          </h2>
+          <!-- ?Card Description -->
+          <p
+            class="font-light text-color-secondary text-sm lg:text-base mb-4 lg:mb-6"
+          >
+            The recent floods in Noakhali have caused significant damage to
+            homes infrastructure. Your donation will help provide essential
+            upplies and to those affected by this disaster. Every contribution,
+            big or small, makes difference. Please join us in supporting the
+            relief fforts and making a positive impact on the lives of those in
+            need. You need to type donation amount in the below input field &
+            click on the donation button & We wiil automatically take your
+            payment. You will get a reciept afterwards & You can also see the
+            total expense and transaction history in our website.
+          </p>
+
+          <div class="flex flex-row lg:flex-col gap-3 lg:gap-4">
+            <!-- ?input  field-->
+            <input
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered lg:w-full placeholder-color-tertiary py-[18px] pl-[18px]"
+            />
+            <!-- ?Noakhali Donate Button -->
+
+            <button
+              class="btn text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8 lg:w-full border-none"
+              onclick="my_modal_1.showModal()"
+            >
+              Donate Now
+            </button>
+            <dialog
+              id="my_modal_1"
+              class="modal flex justify-center items-center"
+            >
+              <div class="modal-box flex flex-col justify-center items-center">
+                <h3 class="text-3xl lg:text-4xl font-extrabold mb-4 lg:mb-5">
+                  Congrates!
+                </h3>
+                <img src="./assets/coin.png" alt="" />
+                <p class="pt-4 text-xl">You Have Donated to Humankind</p>
+                <h3 class="py-3 font-extrabold text-2xl lg:text-3xl">
+                  Successfully
+                </h3>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close Confirmation</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+      </div>
+      <!-- card 1 ends -->
+      <!-- //Card2: Donate for Feni -->
+      <div
+        class="p-6 lg:p-8 border border-stroke-secondary rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 shadow-md"
+      >
+        <!-- !image container -->
+        <div class="rounded-xl col-span-1 w-full h-full">
+          <img
+            class="w-full h-full rounded-xl object-cover"
+            src="./assets/feni.png"
+            alt=""
+          />
+        </div>
+        <!-- !text container -->
+        <div class="col-span-1">
+          <!-- ?startring btn -->
+          <button class="btn">
+            <div class="">
+              <img class="" src="./assets/coin.png" alt="" />
+            </div>
+            <p class="font-regular text-sm lg:text-base text-color-secondary">
+              <span>0</span> <span>BDT</span>
+            </p>
+          </button>
+          <!-- ? card Title-->
+          <h2
+            class="mt-3 mb-3 lg:mt-4 lg:mb-4 font-bold text-base lg:text-xl text-color-primary"
+          >
+            Donate for Flood Relief in Feni,Bangladesh
+          </h2>
+          <!-- ?Card Description -->
+          <p
+            class="font-light text-color-secondary text-sm lg:text-base mb-4 lg:mb-6"
+          >
+            The recent floods in Feni have devastated local communities, leading
+            to severe disruption and loss. Your generous donation will help
+            provide immediate aid, including food, clean water, and medical
+            supplies, to those affected by this calamity. Together, we can offer
+            crucial support and help rebuild lives in the aftermath of this
+            disaster. Every contribution counts towards making a real
+            difference. Please consider donating today to assist those in urgent
+            need. You need to type donation amount in the below input field &
+            click on the donation button & We wiil automatically take your
+            payment.
+          </p>
+
+          <div class="flex flex-row lg:flex-col gap-3 lg:gap-4">
+            <!-- ?input  field-->
+            <input
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered lg:w-full placeholder-color-tertiary py-[18px] pl-[18px]"
+            />
+            <!-- ?Feni Donate Button -->
+
+            <button
+              class="btn text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8 lg:w-full border-none"
+              onclick="my_modal_1.showModal()"
+            >
+              Donate Now
+            </button>
+            <dialog
+              id="my_modal_1"
+              class="modal flex justify-center items-center"
+            >
+              <div class="modal-box flex flex-col justify-center items-center">
+                <h3 class="text-3xl lg:text-4xl font-extrabold mb-4 lg:mb-5">
+                  Congrates!
+                </h3>
+                <img src="./assets/coin.png" alt="" />
+                <p class="pt-4 text-xl">You Have Donated to Humankind</p>
+                <h3 class="py-3 font-extrabold text-2xl lg:text-3xl">
+                  Successfully
+                </h3>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close Confirmation</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+      </div>
+      <!-- card 2 ends -->
+      <!-- //Card3: Donate for Quota Movement -->
+      <div
+        class="p-6 lg:p-8 border border-stroke-secondary rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 shadow-md"
+      >
+        <!-- !image container -->
+        <div class="rounded-xl col-span-1 w-full h-full">
+          <img
+            class="w-full h-full rounded-xl object-cover"
+            src="./assets/quota_protest.png"
+            alt=""
+          />
+        </div>
+        <!-- !text container -->
+        <div class="col-span-1">
+          <!-- ?startring btn -->
+          <button class="btn">
+            <div class="">
+              <img class="" src="./assets/coin.png" alt="" />
+            </div>
+            <p class="font-regular text-sm lg:text-base text-color-secondary">
+              <span>0</span> <span>BDT</span>
+            </p>
+          </button>
+          <!-- ? card Title-->
+          <h2
+            class="mt-3 mb-3 lg:mt-4 lg:mb-4 font-bold text-base lg:text-xl text-color-primary"
+          >
+            Aid for Injured in the Quota Movement
+          </h2>
+          <!-- ?Card Description -->
+          <p
+            class="font-light text-color-secondary text-sm lg:text-base mb-4 lg:mb-6"
+          >
+            The recent Quota movement has resulted in numerous injuries and
+            significant hardship for many individuals. Your support is crucial
+            in providing medical assistance, rehabilitation, and necessary
+            supplies to those affected. By contributing, you help ensure that
+            injured individuals receive the care and support they need during
+            this challenging time. Every donation plays a vital role in
+            alleviating their suffering and aiding in their recovery, Please
+            consider making a donation to support these brave individuals in
+            their time of need. You need to type donation amount in the below
+            input field & click on the donation button & We wiil automatically
+            take your payment. You can also explore our websites for the purity
+            of transaction cause in the websites there are detailed expense of
+            each and every taka you donate. Try to to join as a volunteer in our
+            organisation as we are in extreme need of support.
+          </p>
+
+          <div class="flex flex-row lg:flex-col gap-3 lg:gap-4">
+            <!-- ?input  field-->
+            <input
+              type="text"
+              placeholder="Write Donation Amount"
+              class="input input-bordered lg:w-full placeholder-color-tertiary py-[18px] pl-[18px]"
+            />
+            <!-- ?Quota movement Donate Button -->
+
+            <button
+              class="btn text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8 lg:w-full border-none"
+              onclick="my_modal_1.showModal()"
+            >
+              Donate Now
+            </button>
+            <dialog
+              id="my_modal_1"
+              class="modal flex justify-center items-center"
+            >
+              <div class="modal-box flex flex-col justify-center items-center">
+                <h3 class="text-3xl lg:text-4xl font-extrabold mb-4 lg:mb-5">
+                  Congrates!
+                </h3>
+                <img src="./assets/coin.png" alt="" />
+                <p class="pt-4 text-xl">You Have Donated to Humankind</p>
+                <h3 class="py-3 font-extrabold text-2xl lg:text-3xl">
+                  Successfully
+                </h3>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close Confirmation</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+      </div>
+      <!-- card 3 ends -->
+      <!-- * History segments -->
+      <div
+        class="hidden p-6 lg:p-8 border border-stroke-secondary rounded-2xl shadow-md space-y-4 lg:space-y-4"
+      >
+        <!-- ? card Title-->
+        <h2 class="font-bold text-base lg:text-xl text-color-primary">
+          500 Taka is Donated for famine—2024 at Feni, Bangla
+        </h2>
+        <!-- ?Card Description -->
+        <p class="font-light text-color-secondary text-sm lg:text-base">
+          The recent Quota movement has resulted in numerous injuries and
+          significant
+        </p>
+      </div>
+    </main>
     <!-- SE:Main Ends -->
 
     <!-- script: linking js file -->
