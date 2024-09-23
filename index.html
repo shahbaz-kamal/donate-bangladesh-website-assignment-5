@@ -52,7 +52,7 @@
   </head>
   <body class="font-lexend">
     <!-- Section: header starts -->
-    <header>
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md">
       <!-- *navbar starts -->
       <nav class="bg-navbar-background">
         <div
@@ -92,14 +92,16 @@
       <!-- navbar Ends -->
       <!-- *Donation & History Button starts-->
       <section
-        class="container mx-auto flex justify-center gap-3 lg:gap-4 mt-5 lg:mt-7 mb-6 lg:mb-8"
+        class="container mx-auto flex justify-center gap-3 lg:gap-4 mt-5 lg:mt-7 pb-6 lg:pb-8"
       >
         <button
+          id="donation-btn"
           class="px-8 py-2 lg:py-4 text-sm lg:text-xl rounded-lg font-semibold bg-btn-primary text-color-primary"
         >
           Donation
         </button>
         <button
+          id="history-btn"
           class="px-8 py-2 lg:py-4 text-sm lg:text-xl rounded-lg font-medium border border-stroke-primary text-color-secondary"
         >
           History
@@ -114,6 +116,7 @@
       <!-- *Donation section -->
       <!-- //Card1: Donate for Noakhali -->
       <div
+        id="card-noakhali"
         class="p-6 lg:p-8 border border-stroke-secondary rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 shadow-md"
       >
         <!-- !image container -->
@@ -198,6 +201,7 @@
       <!-- card 1 ends -->
       <!-- //Card2: Donate for Feni -->
       <div
+        id="card-feni"
         class="p-6 lg:p-8 border border-stroke-secondary rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 shadow-md"
       >
         <!-- !image container -->
@@ -283,6 +287,7 @@
       <!-- card 2 ends -->
       <!-- //Card3: Donate for Quota Movement -->
       <div
+        id="card-quota"
         class="p-6 lg:p-8 border border-stroke-secondary rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 shadow-md"
       >
         <!-- !image container -->
@@ -371,19 +376,22 @@
       </div>
       <!-- card 3 ends -->
       <!-- * History segments -->
-      <div
+      <section
+        id="card-history"
         class="hidden p-6 lg:p-8 border border-stroke-secondary rounded-2xl shadow-md space-y-4 lg:space-y-4"
       >
-        <!-- ? card Title-->
-        <h2 class="font-bold text-base lg:text-xl text-color-primary">
-          500 Taka is Donated for famine—2024 at Feni, Bangla
-        </h2>
-        <!-- ?Card Description -->
-        <p class="font-light text-color-secondary text-sm lg:text-base">
-          The recent Quota movement has resulted in numerous injuries and
-          significant
-        </p>
-      </div>
+        <div>
+          <!-- ? card Title-->
+          <h2 class="font-bold text-base lg:text-xl text-color-primary">
+            500 Taka is Donated for famine—2024 at Feni, Bangla
+          </h2>
+          <!-- ?Card Description -->
+          <p class="font-light text-color-secondary text-sm lg:text-base">
+            The recent Quota movement has resulted in numerous injuries and
+            significant
+          </p>
+        </div>
+      </section>
     </main>
     <!-- SE:Main Ends -->
 
