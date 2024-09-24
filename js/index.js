@@ -161,7 +161,7 @@ DonateNoakhaliBtnEl.addEventListener("click", function () {
     cardHistory.insertBefore(historyItem, cardHistory.firstChild);
 
     // clearing the input field
-    inputNoakhaliEl.value = " ";
+    inputNoakhaliEl.value = "";
     // hiding No donation message
     pleaseHide("no-donation-message");
   }
@@ -187,7 +187,7 @@ DonateFeniBtnEl.addEventListener("click", function () {
     const cardHistory = document.getElementById("card-history");
     cardHistory.insertBefore(historyItem, cardHistory.firstChild);
     // Clearing input field
-    inputFeniEl.value = " ";
+    inputFeniEl.value = "";
     // hiding No donation message
     pleaseHide("no-donation-message");
   }
@@ -213,8 +213,13 @@ DonateQuotaBtnEl.addEventListener("click", function () {
     const cardHistory = document.getElementById("card-history");
     cardHistory.insertBefore(historyItem, cardHistory.firstChild);
     // Clearing input field
-    inputQuotaEl.value = " ";
+    inputQuotaEl.value = "";
     // hiding No donation message
     pleaseHide("no-donation-message");
   }
+});
+
+// *Going between home page & blog page
+document.getElementById("blog-btn").addEventListener("click", function () {
+  window.location.href = "blog.html";
 });

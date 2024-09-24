@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh : FAQ</title>
+    <!-- Link: Daisy UI & Tailwind  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Link: font awesome -->
+    <script
+      src="https://kit.fontawesome.com/55062bf411.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link: Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- script: for customising font color in the project -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "color-primary": "#111111",
+              "color-secondary": "rgba(17, 17, 17, 0.7)",
+              "color-tertiary": "rgba(17, 17, 17, 0.4)",
+              "stroke-primary": "rgba(17, 17, 17, 0.3)",
+              "stroke-secondary": "rgba(17, 17, 17, 0.1)",
+              "btn-primary": "#B4F461",
+              "background-card-balance": "rgba(17, 17, 17, 0.05)",
+              "navbar-background": "rgba(249, 247, 243, 1)",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- font family styling -->
+    <style>
+      .font-lexend {
+        font-family: "Lexend", sans-serif;
+      }
+      input::placeholder {
+        font-weight: 300;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body class="font-lexend">
+    <!-- Section: header starts -->
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md">
+      <!-- *navbar starts -->
+      <nav class="bg-navbar-background">
+        <div
+          class="navbar bg-base-100 bg-navbar-background py-4 lg:py-6 container mx-auto lg:pb-10"
+        >
+          <div class="navbar-start">
+            <button
+              id="home-butn"
+              class="px-4 rounded-lg py-3 text-color-primary bg-btn-primary text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8"
+            >
+              Home
+            </button>
+          </div>
+          <div class="navbar-center space-x-4">
+            <div class="w-[30px]">
+              <img class="w-full object-fill" src="./assets/logo.png" alt="" />
+            </div>
+            <h3
+              class="text-sm lg:text-xl text-color-primary font-semibold hidden lg:block"
+            >
+              Donate Bangladesh
+            </h3>
+          </div>
+          <div class="navbar-end space-x-1 lg:space-x-3">
+            <div class="">
+              <img class="" src="./assets/coin.png" alt="" />
+            </div>
+            <p class="font-medium text-sm lg:text-xl text-color-secondary">
+              <span id="total-balance">5500</span> <span>BDT</span>
+            </p>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Section header Ends -->
+
+    <!-- Section:Main Starts -->
+    <main
+      class="space-y-6 lg:space-y-8 container mx-auto mt-5 lg:mt-10 mb-14 lg:mb-20"
+    >
+      <!-- *Title -->
+      <h3 class="font-extrabold text-color-primary pl-3 text-3xl lg:text-4xl">
+        Important FAQ
+        <i class="animate-bounce fa-regular fa-circle-question"></i>
+      </h3>
+
+      <!-- *Accordion -->
+      <section class="container mx-auto px-3 lg:pl-3 lg:pr-0">
+        <div class="join join-vertical w-full">
+          <!-- *What is the Document Object Model (DOM)? -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+              What is the Document Object Model (DOM)?
+            </div>
+            <div class="collapse-content">
+              <p>
+                The Document Object Model (DOM) is a programming interface for
+                web documents. The DOM represents each elements / tag / node as
+                documents or objects. DOM gives many meaningful ways to interact
+                a webpage, manipulating the webpage by making the webpage
+                dynamic.
+              </p>
+            </div>
+          </div>
+          <!-- * How do you select an element from the DOM?-->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                There are many ways of selecting one or elements. Some of them
+                are given below: <br />
+
+                <span class="font-bold mt-2"
+                  >1.document.getElementById():
+                </span>
+                Inside the first bracket the id of an element should be given .
+                For example this &lt;button&gt; id="history-btn"&lt;/button&gt;
+                this tag should be targeted by
+                document.getElementById(“history-btn”). This results in giving
+                one element as ids are unique .<br />
+                <span class="font-bold"
+                  >2.document.getElementsByClassName():</span
+                >This gives all the elements that have the class mentioned. For
+                Example &lt;p&gt;class=”section-description”> &lt;/p&gt;, this
+                will give all the elements with class name
+                section-description.<br />
+                <span class="font-bold">3.document.querySelector(): </span> This
+                targets the first element that matches the CSS selector.<br />
+                <span class="font-bold">4.document.querySelectorAll(): </span
+                >This targets the all element that matches the CSS selector.<br />
+                <span class="font-bold"
+                  >5.document.getElementsByTagName(): </span
+                >This target the elements by tag name. Gives all elements having
+                specific tag name.
+
+                <br />
+
+                There are many other ways of selecting one or elements.
+              </p>
+            </div>
+          </div>
+          <!-- * What is event delegation in the context of the DOM, and why is it useful?-->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              What is event delegation in the context of the DOM, and why is it
+              useful?
+            </div>
+            <div class="collapse-content">
+              <p>
+                To handle Events at a higher level in DOM than the elements
+                where the event originated a technique called event delegation
+                is used. This technique uses event propagation & event bubbling.
+                In simple way, in this technique we can manage events for a
+                child element by simply adding an event listener to its parent
+                element.
+              </p>
+            </div>
+          </div>
+          <!-- * How do you manipulate an element's attributes and styles using the DOM?-->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How do you manipulate an element's attributes and styles using the
+              DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                <span class="font-medium"
+                  >1. Manupulating an Element's attributes:</span
+                >
+                First We need to target the element by some ways like
+                document.getElementById() and than adding
+                .classList.add/remove("name-of class") . For Example ,
+                <strong
+                  >document.getElementById("history-tab").classList.add("hidden"),</strong
+                >hide the section having id "history-tab". There are more ways
+                of manupulating attributes. <br />
+                <span class="font-medium">2. Manupulating styles:</span> Basic
+                format is
+                <strong>element.style.propertyName = 'value';.</strong>For
+                Example,
+                <strong
+                  >document.getElementById("history-tab").style.background='green'</strong
+                >, will make a green background for the section having ID
+                "history-tab"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Giving a background color as per figma -->
+    <div class="bg-navbar-background w-full h-20 lg:h-[146px]"></div>
+    <!-- Section:Main Ends -->
+    <script>
+      document
+        .getElementById("home-butn")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>

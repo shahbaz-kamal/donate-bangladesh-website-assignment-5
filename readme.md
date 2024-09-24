@@ -1,14 +1,14 @@
 # Welcome to Assignment 5
 
-## <img width=30px src="assets/logo.png"/> DONATE BANGLADESH
+## <img width=30px src="assets/logo.png"/> DONATE BANGLADESH ✅
 
 ## Key Rule
 
-- Do not ask about mark distribution in the group, as it will not be provided.
-- Do not post assignment feedback after receiving it. If you encounter issues or have complaints, please join a support session for discussion.
-- Avoid using "lorem ipsum" text. Use relevant and meaningful content instead.
-- Feel free to modify the color or design, but ensure the design is visually appealing and professional.
-- You are **not allowed** to use any JavaScript library or framework for this assignment.
+- Do not ask about mark distribution in the group, as it will not be provided. ✅
+- Do not post assignment feedback after receiving it. If you encounter issues or have complaints, please join a support session for discussion.✅
+- Avoid using "lorem ipsum" text. Use relevant and meaningful content instead.✅
+- Feel free to modify the color or design, but ensure the design is visually appealing and professional.✅
+- You are **not allowed** to use any JavaScript library or framework for this assignment.✅
 
 ## Design
 
@@ -53,10 +53,10 @@
 - **Sticky Navbar**: Make the navbar sticky to the top of the page. ✅
 - **Blog Page**: Create a `blog.html` file and link it to the main page:
   - The blog page should contain 4 questions and their answers:
-    1. What is the Document Object Model (DOM)?
-    2. How do you select an element from the DOM?
-    3. What is event delegation in the context of the DOM, and why is it useful?
-    4. How do you manipulate an element's attributes and styles using the DOM?
+    1. What is the Document Object Model (DOM)?✅
+    2. How do you select an element from the DOM?✅
+    3. What is event delegation in the context of the DOM, and why is it useful?✅
+    4. How do you manipulate an element's attributes and styles using the DOM?✅
 - **Toggle Active Status**: Toggle the active status of the "Donation" and "History" buttons:
   - Change the button color to indicate when it's active. ✅
 - **Static Modal**: Display a static modal instead of an alert on a successful donation. ✅

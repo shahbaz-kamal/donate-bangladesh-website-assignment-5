@@ -12,8 +12,6 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Link: font awesome -->
-
     <!-- Link: Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,7 +46,7 @@
       }
       input::placeholder {
         font-weight: 300;
-        font-size: 16px; /* Custom font weight */
+        font-size: 16px;
       }
     </style>
   </head>
@@ -62,18 +60,15 @@
         >
           <div class="navbar-start">
             <button
-              class="btn text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8"
+              id="blog-btn"
+              class="rounded-lg py-3 px-4 text-color-primary bg-btn-primary text-color-primary bg-btn-primary font-semibold text-sm lg:text-xl lg:px-8"
             >
               Blog
             </button>
           </div>
           <div class="navbar-center space-x-4">
-            <div class="w-7 h-7 lg: w-auto lg:h-auto">
-              <img
-                class="w-full h-full object-fill"
-                src="./assets/logo.png"
-                alt=""
-              />
+            <div class="w-[30px]">
+              <img class="w-full object-fill" src="./assets/logo.png" alt="" />
             </div>
             <h3
               class="text-sm lg:text-xl text-color-primary font-semibold hidden lg:block"
@@ -114,7 +109,7 @@
     <!-- Section header Ends -->
 
     <!-- Section:Main Starts -->
-    <main class="space-y-6 lg:space-y-8 container mx-auto">
+    <main class="space-y-6 lg:space-y-8 container mx-auto mb-14 lg:mb-20">
       <!-- *Donation section -->
       <!-- //Card1: Donate for Noakhali -->
       <div
@@ -402,10 +397,8 @@
         </div>
       </section>
     </main>
-    <!-- // -->
-    <!-- Open the modal using ID.showModal() method -->
-
-    <!-- SE:Main Ends -->
+    <!-- Giving a background color as per figma -->
+    <div class="bg-navbar-background w-full h-20 lg:h-[146px]"></div>
 
     <!-- script: linking js file -->
     <script src="./js/index.js"></script>
